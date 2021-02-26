@@ -1,13 +1,4 @@
-var zoom=5;
-	var latstart=22.76;
-	var longstart=78;
-    var map = L.map('map').setView([latstart, longstart], zoom);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
-/*var geoJSON = {
+var geoJSON = {
     "type": "FeatureCollection",
     "features": [
       {
@@ -32,12 +23,4 @@ var zoom=5;
     ]
   }
 
- // L.geoJSON(geoJSON).addTo(map)*/
-
-var elaneermarker= L.marker([10.821935666713527,
-    78.69371116161345]).addTo(map);
-
-    elaneermarker.bindPopup('<p><a href="elaneer.html">Watch Review</a></p>'
-    ).openPopup();
-
-    
+ L.geoJSON(geoJSON).addTo(map)
