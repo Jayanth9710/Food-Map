@@ -5,3 +5,10 @@ var zoom=5;
 	var map = L.map('map').setView([latstart,longstart],zoom);
 
 <script src="https://unpkg.com/leaflet.gridlayer.googlemutant@latest/dist/Leaflet.GoogleMutant.js"></script>
+
+var roads = L.gridLayer
+	.googleMutant({
+		type: "hybrid", // valid values are 'roadmap', 'satellite', 'terrain' and 'hybrid'
+	})
+	.addTo(map);
+
