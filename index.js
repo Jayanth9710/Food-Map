@@ -3,5 +3,6 @@ var zoom=5;
 	var longstart=78;
 	var markers;
 	var map = L.map('map').setView([latstart,longstart],zoom);
-var googleLayer = new L.Google('HYBRID');
+
+	var googleLayer = new L.Google('HYBRID');
 	map.addLayer(googleLayer,true);
