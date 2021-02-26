@@ -4,5 +4,6 @@ var zoom=5;
 	var markers;
 	var map = L.map('map').setView([latstart,longstart],zoom);
 
-	var googleLayer = new L.Google('HYBRID');
-	map.addLayer(googleLayer,true);
+googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
